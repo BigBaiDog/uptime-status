@@ -25,9 +25,5 @@ window.Config = {
       text: 'GitHub',
       url: 'https://github.com/BigBaiDog'
     },
-    {
-      text: 'Blog',
-      url: 'https://abo.xyz/'
-    },
   ],
 };
