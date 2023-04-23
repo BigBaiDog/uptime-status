@@ -23,7 +23,7 @@ window.Config = {
     },
     {
       text: 'GitHub',
-      url: 'https://github.com/yb/uptime-status'
+      url: 'https://github.com/BigBaiDog'
     },
     {
       text: 'Blog',
