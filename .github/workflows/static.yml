@@ -4,20 +4,15 @@ on:
   push:
     branches:
       - master  # 确保你的主分支名是 main，如果不是，请修改为相应的分支名
- 
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-22.04
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
- 
-      - name: Install 🔧
-        run: |
-          npm install
-          npm run build  # 构建你的静态HTML文件
-      - name: Deploy 🚀
+      - uses: actions/checkout@v2
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # 确保这里指向你构建的HTML文件夹
+          publish_dir: ./public
